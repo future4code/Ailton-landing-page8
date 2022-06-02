@@ -9,17 +9,25 @@ a {
 }
 
 header {
+    margin: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    width: 100vw;
+    width: 95vw;
     padding: 0vh 0vw;
 }
 
 #icon {
     width: 24px;
     height: 24px;
+}
+
+#idiomas {
+    display: flex;
+    padding: 1px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid darkgray;
 }
 
 #opcoes {
@@ -161,18 +169,21 @@ footer p:hover {
 }
 
 .pra-voce {
-
+    border-left: 1px solid white;
+    padding: 2px 8px;
 }
 
 .precisa-de-ajuda {
-
+    border-left: 1px solid white;
+    padding: 2px 8px;
 }
 
 .fale-com-a-gente {
-
+    border-left: 1px solid white;
+    padding: 2px 8px;
 }
 
-@media screen and (max-device-width : 480px) {
+@media screen and (max-device-width : 500px) {
 
     header {
             height: min-content;
@@ -197,8 +208,12 @@ footer p:hover {
     }
 }
 
-@media screen and (min-device-width : 481px) and (max-device-width : 1045px) {
+ /* tablet size */
+
+@media screen and (min-device-width : 501px) and (max-device-width : 1045px) {
     header {
+        margin: 0px;
+        width: 100vw;
         justify-content: center;
         flex-direction: column;
         height: min-content;        
