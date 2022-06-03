@@ -17,7 +17,8 @@ link surge: https://used-beginner.surge.sh/
 
 Arquivos de print:
 
-print-pricipal.png
-print-cadastro.png
-print-renegociar-dividas.png
-print-responsivo.png
+![print-principal](https://user-images.githubusercontent.com/104606162/171946303-2eecac65-591a-4283-b977-5a0118de105c.png)
+
+![alt text](print-cadastro.png)
+![alt text](print-renegociar-dividas.png)
+![alt text](print-responsivo.png)
