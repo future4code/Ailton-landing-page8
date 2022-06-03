@@ -18,6 +18,12 @@ header {
     padding: 0vh 0vw;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 #icon {
     width: 24px;
     height: 24px;
@@ -42,6 +48,13 @@ header {
     min-width: min-content;
     height: 100%;
     margin: 2px;
+}
+
+#opcoes>a>h1 {
+    color: #ff914d;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 125px;
+    min-height: 40;
 }
 
 #opcoes h1 {
@@ -111,30 +124,25 @@ header {
 
 .apresentacao{
     display: flex;
-    margin: 1vh;
+    padding: 2vh 2vw;
     background-color: #ffffff;
     justify-content:space-around;
     align-items: center;
     background-color: #ffbd591f;   /* ficou uma linha branca entre a imagem das pessoas e a do cartão. Dá pra tirar? */
 }
 #slogan{
-    font-size: xx-large;
-   font-size: 3vw;
+    font-size: 3rem;
     color: #ff914d;
-    /* padding: 1vh 2vw; */
-    margin-top: 4vh;
+    min-width: 300px;
 }
+
 #texto-apresentacao{
     display: flex;
     /* padding-left: 2vw; */
 }                            /*queria centralizar melhor os textos e a logo*/
 #logo{
-    display: flex;
-    align-items:center;  
-    height:20vh ;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
-    /* margin-right: 4vw; */
+    height: 150px;
+    width: 150px;
 }
 .link-para-pagina{
     display: flex;
@@ -148,26 +156,46 @@ header {
     color: white;
     font-family: sans-serif;
     font-weight: bold;
-    margin: 4vh 8vw;
-    min-width: 110px;
-   
-    /* min-width: 70px; */
+    min-width: 190px;
 }
+
 .link-para-pagina:hover{
     color:#000000
 }
 
 #imagem-pessoas{
-    width: 100vw;  /* a iamgem criou uma rolagem lateral, não sei consertar*/ 
+    width: 100%;  /* a iamgem criou uma rolagem lateral, não sei consertar*/ 
 }
 .peca-seu-cartao{
     display: flex;
+    align-items: center;
     justify-content: space-around; 
-    background-color: #ffbd591f;
-    
-}                           /* ficou uma linha branca entre a imagem das pessoas e a do cartão. Dá pra tirar? Se preferirem, é só tirar o background e alterar a cor do "link-pagina-formulario"*/
+    background-color: #ffbd591f;    
+    padding: 2vh 0vw;
+}
+/* ficou uma linha branca entre a imagem das pessoas e a do cartão. Dá pra tirar? Se preferirem, é só tirar o background e alterar a cor do "link-pagina-formulario"*/
 #imagem-cartao{
 width: 40vw;
+}
+
+#botao-pedir {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: flex;
+    box-shadow: 2px solid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: orange;
+    border-radius: 20px 20px 20px 20px;
+    height: 60px;
+    width: 270px;
+}
+
+#botao-pedir:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 1, 0.711));
 }
 .link-pagina-formulario{     /* falta responsividade*/
     display: flex;
@@ -192,11 +220,12 @@ width: 40vw;
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 1, 0.711));
 }
 .trabalhe-conosco{
+    padding: 4vh 0vw;
+    height: min-content;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #ffbd59;
-                                            /*linha branca*/
 }
 #imagem-trabalhe-conosco{
     width: 30vw;
@@ -212,11 +241,9 @@ width: 40vw;
     font-weight: bold;
     font-size: xx-large; 
     width:max-content;
-   height: min-content;
-   min-width: 110px;
-   padding: 1vw;
-   margin-right: 4vw;
-  
+    height: min-content;
+    min-width: 110px;
+    height: 64px;  
 }
 .link-pagina-divida:hover {
     -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 1, 0.711));
@@ -227,7 +254,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 2vh 2vw;
-    width: 100vw;
+    width: 98vw;
     color: white;
     background-color: rgb(44, 44, 44);
 }
@@ -275,7 +302,6 @@ footer p:hover {
     padding: 2px 2px;
     border-radius: 5px 5px 5px 5px;
     align-items: center;
-    background-color: white;
 }
 
 .redes-sociais {
@@ -295,6 +321,15 @@ footer p:hover {
 .fale-com-a-gente {
     border-left: 1px solid white;
     padding: 2px 8px;
+}
+
+#chamada-site {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    gap: 2vh;
+    flex-direction: column;
+    width: 60%;
 }
 
 @media screen and (max-device-width : 500px) {
@@ -320,6 +355,52 @@ footer p:hover {
         flex-direction: column;
         gap: 30px;
     }
+
+    #logo{
+        height: 100px;
+        width: 100px;
+    }
+
+    #slogan{
+        font-size: 1.5rem;
+        color: #ff914d;
+    }
+
+    #texto-apresentacao {
+        font-size: .75rem;
+    }
+
+    #imagem-cartao {
+        width: 100%;
+    }
+
+    .peca-seu-cartao{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        gap: 24px;
+    }
+
+    #imagem-trabalhe-conosco {
+        width: 100%;
+    }
+
+    .trabalhe-conosco{
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 24px;
+    }
+
+    .link-pagina-divida{
+        font-size: 1rem;
+        height: 44px;
+        width: 150px;
+    }
+
+    #botao-pedir{
+        font-size: 1rem;
+        height: 44px;
+        width: 180px;
+    }
 }
 
  /* tablet size */
@@ -333,8 +414,46 @@ footer p:hover {
         height: min-content;        
     }
 
+    #imagem-cartao {
+        width: 100%;
+    }
+
+    .peca-seu-cartao{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        gap: 24px;
+    }
+
+    #imagem-trabalhe-conosco {
+        width: 100%;
+    }
+
+    .trabalhe-conosco{
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 24px;
+    }
+
+    #logo{
+        height: 125px;
+        width: 125px;
+    }
+
     #acesso {
         width: min-content;
+    }
+
+    #slogan{
+        font-size: 2rem;
+        color: #ff914d;
+    }
+
+    #texto-apresentacao {
+        font-size: 1rem;
+    }
+
+    #chamada-site {
+        width: 50%;
     }
 
     #icon {

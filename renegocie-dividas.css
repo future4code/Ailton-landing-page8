@@ -44,6 +44,13 @@ header {
     margin: 2px;
 }
 
+#opcoes>a>h1 {
+    color: #ff914d;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 125px;
+    min-height: 40;
+}
+
 #opcoes h1 {
     font-family: Arial, Helvetica, sans-serif;
     min-width: 125px;
@@ -111,21 +118,30 @@ header {
 main{
     /* display: flex; */
     background-color: #ffbd591f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.texto1, .texto2, .texto3, .titulo1, .titulo2, .titulo3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .imagem-renegocie{
-    width: 20vw;
+    width: 40vw;
     margin: 0;
 }
 .renegocie1, .renegocie2, .renegocie3{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 90vw;
 }
 .titulo1{
     font-size: xx-large;
-  
-    
 }
+
 .titulo2{
     font-size: xx-large;
 
@@ -134,29 +150,60 @@ main{
     font-size: xx-large;
    
 }
+
+.renegocie1 img, .renegocie2 img, .renegocie3 img {
+    width: 650px;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.renegocie1 {
+    margin: 2vh;
+    gap: 2vh;
+}
+
+.renegocie2 {
+    margin: 2vh;
+    gap: 2vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.renegocie3 {
+    margin: 2vh;
+    gap: 2vh;
+}
+
 .texto1{
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size:larger;
+    flex-direction: column;
+    font-size: 1.5rem;
+    height: 80%;
+    width: 40%;
 }
  .texto2{
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size:larger;
+    flex-direction: column;
+    font-size: 1.5rem;
+    height: 80%;
+    width: 40%;
 }
  .texto3{
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size:larger;
+    flex-direction: column;
+    text-align: end;
+    font-size: 1.5rem;
+    height: 80%;
+    width: 40%;
 }
 footer {
     display: flex;
     justify-content: space-between;
     padding: 2vh 2vw;
-    width: 100vw;
+    width: 100%;
     color: white;
     background-color: rgb(44, 44, 44);
 }
@@ -205,7 +252,6 @@ footer p:hover {
     padding: 2px 2px;
     border-radius: 5px 5px 5px 5px;
     align-items: center;
-    background-color: white;
 }
 
 .redes-sociais {
@@ -231,7 +277,35 @@ footer p:hover {
 
     header {
             height: min-content;
-        }
+     }
+    
+    main {
+        flex-direction: column;
+    }
+
+    .renegocie1, .renegocie2, .renegocie3 {
+        flex-direction: column;
+    }
+
+    .renegocie1 img, .renegocie2 img, .renegocie3 img {
+        width: 320px;
+    }
+
+    .texto1, .texto2, .texto3 {
+        width: 95%;
+        height: min-content;
+    }
+
+    .texto1 h2, .texto2 h2, .texto3 h2{
+        font-size: 1.25rem;
+        text-align: left;
+    }
+
+    .texto1 span, .texto2 span, .texto3 span{
+        font-size: 1rem;
+        text-align: left;
+    }
+
 
     #opcoes {
         flex-direction: column;
@@ -265,6 +339,33 @@ footer p:hover {
 
     #acesso {
         width: min-content;
+    }
+
+    .texto1 h2, .texto2 h2, .texto3 h2{
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .texto1 span, .texto2 span, .texto3 span{
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .renegocie1 img, .renegocie2 img, .renegocie3 img {
+        width: 500px;
+    }
+
+    .texto1, .texto2, .texto3 {
+        width: 80%;
+        height: min-content;
+    }
+
+    .renegocie1, .renegocie2, .renegocie3 {
+        flex-direction: column;
     }
 
     #icon {
